@@ -1,8 +1,13 @@
+/*----------=====default=====----------*/
+
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+*>img{
+    max-width: 100%;
 }
 :root{
     --Dark-Blue: hsl(233, 26%, 24%);
@@ -11,11 +16,109 @@
     --Grayish-Blue: hsl(233, 8%, 62%);
     --Light-Grayish-Blue: hsl(220, 16%, 96%);
     --main-bg: hsl(0, 0%, 98%);
-    --White: hsl(0, 0%, 100%);
+    --white: hsl(0, 0%, 100%);
 }
 body{
     min-height: 100vh;
     background: var(--main-bg);
     font-size: 1.125rem;
     font-family: 'Public Sans', sans-serif;
+}
+
+
+/*----------=====nav=====----------*/
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.nav__cta{
+    display: none;
+}
+
+/* ---hamburger--- */
+.nav__menu{
+    width: 1.65rem;
+    height: 1.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.nav__menu .hamburger{
+    position: absolute;
+    content: '';
+    width: 1.65rem;
+    height: 2px;
+    background: var(--Dark-Blue);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+.hamburger::before,.hamburger::after{
+    position: absolute;
+    content: '';
+    width: 1.65rem;
+    height: 2px;
+    background: var(--Dark-Blue);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+.hamburger::before{
+    transform: translateY(-.35rem);
+    -webkit-transform: translateY(-.35rem);
+    -moz-transform: translateY(-.35rem);
+    -ms-transform: translateY(-.35rem);
+    -o-transform: translateY(-.35rem);
+}
+.hamburger::after{
+    transform: translateY(.35rem);
+    -webkit-transform: translateY(.35rem);
+    -moz-transform: translateY(.35rem);
+    -ms-transform: translateY(.35rem);
+    -o-transform: translateY(.35rem);
+}
+nav.active .hamburger{
+    background: transparent;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+nav.active .hamburger::before{
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+}
+nav.active .hamburger::after{
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
 }
