@@ -10,10 +10,11 @@ navMenu.addEventListener('click',()=>{
     nav.classList.toggle('active');
 
     if(nav.classList.contains('active')){
-        console.log('true')
-        overlay.style.background = "hsla(233, 26%, 24%,.8)";
+        nav.style.boxShadow = "0 20px 20px 0 hsla(0, 0%, 0%, .5)";
+        overlay.style.background = "hsla(233, 26%, 24%,.5)";
         overlay.style.zIndex = "10";
     }else{
+        nav.style.boxShadow = "none";
         overlay.style.background = "transparent";
         overlay.style.zIndex = "-1";
     }
