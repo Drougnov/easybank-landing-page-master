@@ -9,6 +9,9 @@
 *>img{
     max-width: 100%;
 }
+p{
+    line-height: 1.6;
+}
 :root{
     --Dark-Blue: hsl(233, 26%, 24%);
     --Lime-Green: hsl(136, 65%, 51%);
@@ -20,8 +23,9 @@
 }
 body{
     min-height: 100vh;
+    color: var(--Grayish-Blue);
     background: var(--main-bg);
-    font-size: 1.125rem;
+    font-size: 15px;
     font-family: 'Public Sans', sans-serif;
     position: relative;
 }
@@ -55,14 +59,14 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem 1.5rem;
+    padding: 1.25rem 1rem;
     z-index: 15;
 }
 .nav__links{
     list-style-type: none;
     position: fixed;
     top: 5rem;
-    width: calc(100% - 3rem);
+    width: calc(100% - 2rem);
     background: var(--white);
     display: flex;
     flex-direction: column;
@@ -70,11 +74,11 @@ nav{
     gap: 1.75rem;
     padding: 1.75rem 0;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
-    transform: translateX(calc(-100% - 3rem));
-    -webkit-transform: translateX(calc(-100% - 3rem));
-    -moz-transform: translateX(calc(-100% - 3rem));
-    -ms-transform: translateX(calc(-100% - 3rem));
-    -o-transform: translateX(calc(-100% - 3rem));
+    transform: translateX(calc(-100% - 2rem));
+    -webkit-transform: translateX(calc(-100% - 2rem));
+    -moz-transform: translateX(calc(-100% - 2rem));
+    -ms-transform: translateX(calc(-100% - 2rem));
+    -o-transform: translateX(calc(-100% - 2rem));
     transition: all .3s linear;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
@@ -95,6 +99,7 @@ nav.active .nav__links{
 }
 .nav__links li a{
     color: var(--Dark-Blue);
+    font-size: 1.125rem;
     text-decoration: none;
 }
 .nav__cta{
@@ -189,8 +194,34 @@ header{
     background-size: contain;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    padding: 0 1.5rem;
+    gap: 2rem;
+    padding: 0 1rem;
 }
 .header__img img{
     margin-top: -52px;
+}
+.header__text{
+    text-align: center;
+    padding: 0 .5rem;
+}
+.header__text h1{
+    color: var(--Dark-Blue);
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+.header__text a{
+    display: block;
+    width: max-content;
+    color: var(--white);
+    background: linear-gradient(to right, var(--Lime-Green),var(--Bright-Cyan));
+    font-weight: 700;
+    text-decoration: none;
+    margin: 2rem auto 0 auto;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
 }
