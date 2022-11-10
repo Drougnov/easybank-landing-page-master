@@ -15,6 +15,7 @@ p{
 h1,h2,h3{
     color: var(--Dark-Blue);
     font-weight: 300;
+    margin-bottom: 1rem;
 }
 :root{
     --Dark-Blue: hsl(233, 26%, 24%);
@@ -28,6 +29,7 @@ h1,h2,h3{
 body{
     min-height: 100vh;
     color: var(--Grayish-Blue);
+    background: var(--main-bg);
     font-size: 15px;
     font-family: 'Public Sans', sans-serif;
     position: relative;
@@ -208,8 +210,7 @@ header{
     padding: 0 .5rem;
 }
 .header__text h1{
-    font-size: 2.25rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
 }
 .header__text a{
     display: block;
@@ -230,14 +231,14 @@ header{
 /*----------=====main=====----------*/
 
 /* ---about--- */
+
 main .about{
-    background: var(--main-bg);
+    background: var(--Light-Grayish-Blue);
     text-align: center;
     padding: 5rem 1rem;
 }
 .about h2{
     font-size: 2rem;
-    margin-bottom: 1rem;
 }
 .about__grid-container{
     display: grid;
@@ -245,6 +246,24 @@ main .about{
     margin-top: 5rem;
 }
 .about__grid h3{
-    font-size: 1.28rem;
-    margin: 1rem 0;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+/* ---blog--- */
+
+main .blog{
+    padding: 5rem 1rem;
+}
+.blog h2{
+    font-size: 2rem;
+    text-align: center;
+}
+.blog__grid-container{
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.blog__grid{
+    background: var(--white);
 }
