@@ -276,6 +276,10 @@ main .blog{
     -o-border-radius: .3rem;
     overflow: hidden;
 }
+.blog__grid img{
+    width: 100%;
+    height: 230px;
+}
 .blog__grid--text{
     font-size: 13px;
     padding: 1.5rem;
@@ -336,4 +340,41 @@ footer a{
 .footer__last--cta{
     margin: 0 auto;
     padding: .75rem 1.5rem;
+}
+
+/*----------=====media-queries=====----------*/
+
+/* ---tablet--- */
+
+@media(min-width: 750px){
+    nav{
+        padding: 1.5rem 3rem;
+    }
+    .nav__links{
+        top: 7rem;
+        width: calc(100% - 6rem);
+        transform: translateX(calc(-100% - 6rem));
+        -webkit-transform: translateX(calc(-100% - 6rem));
+        -moz-transform: translateX(calc(-100% - 6rem));
+        -ms-transform: translateX(calc(-100% - 6rem));
+        -o-transform: translateX(calc(-100% - 6rem));
+    }
+    .nav__cta{
+        display: block;
+        margin: 0;
+        padding: .75rem 1.5rem;
+    }
+    header{
+        padding: 0 3rem 5rem 3rem;
+    }
+    .header__img img{
+        margin-top: -100px;
+    }
+    main .about{
+        padding: 5rem 3rem;
+    }
+    .about__grid-container,
+    .blog__grid-container{
+        grid-template-columns: 1fr 1fr;
+    }
 }
