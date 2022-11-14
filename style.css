@@ -365,16 +365,87 @@ footer a{
         padding: .75rem 1.5rem;
     }
     header{
-        padding: 0 3rem 5rem 3rem;
+        padding: 5.625rem 3rem 5rem 3rem;
     }
     .header__img img{
         margin-top: -100px;
     }
-    main .about{
+    main .about,
+    main .blog{
         padding: 5rem 3rem;
     }
     .about__grid-container,
     .blog__grid-container{
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ---laptop--- */
+
+@media(min-width: 1000px){
+    .nav__links{
+        position: initial;
+        width: max-content;
+        background: transparent;
+        flex-direction: row;
+        padding: 0;
+        box-shadow: none;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+    .nav__links li a{
+        color: var(--Grayish-Blue);
+        font-size: 1rem;
+    }
+    .nav__menu{
+        display: none;
+    }
+    header{
+        background: url(./images/bg-intro-desktop.svg) no-repeat;
+        background-size: contain;
+        background-position: 550px -150px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 3rem;
+        align-items: center;
+    }
+    .header__img{
+        order: 1;
+    }
+    .header__img img{
+        margin-top: -50px;
+    }
+    .header__text{
+        max-width: 465px;
+        text-align: left;
+    }
+    .header__text a{
+        margin: 2rem 0 0 0;
+    }
+    .blog__grid-container{
+        gap: 3rem;
+        padding: 0;
+    }
+    footer{
+        justify-items: stretch;
+        grid-template-columns: repeat(3, auto);
+        padding: 3rem;
+    }
+    .footer__first{
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .footer__nav--links{
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    .footer__last{
+        text-align: right;
+    }
+    .footer__last--cta{
+        margin: 0 0 0 auto;
     }
 }
