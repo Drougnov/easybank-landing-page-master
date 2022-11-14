@@ -107,9 +107,6 @@ nav.active .nav__links{
     font-size: 1.125rem;
     text-decoration: none;
 }
-.nav__cta{
-    display: none;
-}
 
 /* ---hamburger--- */
 .nav__menu{
@@ -212,7 +209,9 @@ header{
 .header__text h1{
     font-size: 2.5rem;
 }
-.header__text a{
+.header__text a,
+.footer__last--cta,
+.nav__cta{
     display: block;
     width: max-content;
     color: var(--white);
@@ -226,6 +225,9 @@ header{
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
+}
+.nav__cta{
+    display: none;
 }
 
 /*----------=====main=====----------*/
@@ -261,7 +263,7 @@ main .blog{
 }
 .blog__grid-container{
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-top: 2rem;
     padding: 0 .5rem;
 }
@@ -288,4 +290,50 @@ main .blog{
 }
 .blog__grid--text a h3{
     margin: .5rem 0;
+}
+
+/*----------=====footer=====----------*/
+
+footer{
+    background: var(--Dark-Blue);
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+footer a{
+    color: var(--white);
+    text-decoration: none;
+}
+.footer__first{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.footer__first .footer__logo{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(250deg) brightness(103%) contrast(102%);
+}
+.footer__first .media__links{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+.media__links li a{
+    font-size: 1.5rem;
+}
+.footer__nav--links{
+    list-style-type: none;
+    display: grid;
+    gap: 1rem;
+}
+.footer__last{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.footer__last--cta{
+    margin: 0 auto;
+    padding: .75rem 1.5rem;
 }
