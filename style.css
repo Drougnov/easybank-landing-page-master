@@ -6,9 +6,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-*>img{
-    max-width: 100%;
-}
 p{
     line-height: 1.6;
 }
@@ -191,20 +188,10 @@ nav.active .hamburger::after{
 
 /*----------=====header=====----------*/
 
-header{
-    background: url(./images/bg-intro-mobile.svg) no-repeat;
-    background-size: contain;
-    display: grid;
-    grid-template-rows: auto auto;
-    gap: 1.5rem;
-    padding: 0 1rem 5rem 1rem;
-}
-.header__img img{
-    margin-top: -58px;
-}
+
 .header__text{
     text-align: center;
-    padding: 0 .5rem;
+    padding: 0 1.5rem 5rem 1.5rem;
 }
 .header__text h1{
     font-size: 2.5rem;
@@ -341,6 +328,9 @@ footer a{
     margin: 0 auto;
     padding: .75rem 1.5rem;
 }
+.attribution{
+    font-size: .8rem;
+}
 
 /*----------=====media-queries=====----------*/
 
@@ -364,11 +354,8 @@ footer a{
         margin: 0;
         padding: .75rem 1.5rem;
     }
-    header{
-        padding: 5.625rem 3rem 5rem 3rem;
-    }
-    .header__img img{
-        margin-top: -100px;
+    .header__text{
+        padding: 0 3rem 5rem 3rem;
     }
     main .about,
     main .blog{
@@ -403,24 +390,10 @@ footer a{
     .nav__menu{
         display: none;
     }
-    header{
-        background: url(./images/bg-intro-desktop.svg) no-repeat;
-        background-size: contain;
-        background-position: 550px -150px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        gap: 3rem;
-        align-items: center;
-    }
-    .header__img{
-        order: 1;
-    }
-    .header__img img{
-        margin-top: -50px;
-    }
     .header__text{
         max-width: 465px;
         text-align: left;
+        padding: 5.6rem 0 5rem 3rem;
     }
     .header__text a{
         margin: 2rem 0 0 0;
@@ -447,5 +420,61 @@ footer a{
     }
     .footer__last--cta{
         margin: 0 0 0 auto;
+    }
+    main .blog{
+        z-index: -1;
+    }
+}
+
+/* ---desktop--- */
+
+@media(min-width: 1200px){
+    body{
+        font-size: 1.125rem;
+    }
+    nav{
+        padding: 1.5rem 8.5rem;
+    }
+    .nav__cta,.footer__last--cta{
+        padding: 1rem 2rem;
+    }
+    .header__text{
+        max-width: 585px;
+        padding: 0 0 10rem 8.5rem;
+    }
+    .header__text h1{
+        font-size: 3.5rem;
+    }
+    main .about,
+    main .blog{
+        padding: 5rem 8.5rem;
+        text-align: left;
+    }
+    .about__text{
+        max-width: 650px;
+    }
+    .about__text h2,
+    .blog h2{
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+    .about__grid-container,
+    .blog__grid-container{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.25rem;
+        font-size: 1rem;
+    }
+    .about__grid h3{
+        font-size: 1.5rem;
+    }
+    main .blog{
+        text-align: left;
+    }
+    footer{
+        padding: 5rem 8.5rem;
+    }
+    .footer__nav--links{
+        text-align: left;
     }
 }
