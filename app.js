@@ -20,4 +20,8 @@ navMenu.addEventListener('click',()=>{
     }
 })
 
-//
+// remove box-shadow in laptops and desktops
+var x = window.matchMedia("(min-width: 1000px)");
+if(x.matches && nav.classList.contains('active')){
+    nav.style.boxShadow = "none";
+}
