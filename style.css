@@ -391,6 +391,9 @@ footer a{
         width: 100%;
         overflow-x: hidden;
     }
+    .body__overlay{
+        display: none;
+    }
     .nav__links{
         position: initial;
         width: max-content;
