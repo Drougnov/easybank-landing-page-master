@@ -74,7 +74,7 @@ nav{
     flex-direction: column;
     align-items: center;
     gap: 1.75rem;
-    padding: 1.75rem 0;
+    padding: 2.25rem 0;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
     transform: translateX(calc(-100% - 2rem));
     -webkit-transform: translateX(calc(-100% - 2rem));
@@ -188,8 +188,25 @@ nav.active .hamburger::after{
 
 /*----------=====header=====----------*/
 
-
+header{
+    display: grid;
+    grid-template-rows: auto auto;
+}
+.header__img{
+    background: url(./images/bg-intro-mobile.svg) no-repeat;
+    background-size: 100% 100%;
+    padding: 0 .5rem;
+}
+.header__img img{
+    width: 100%;
+    transform: translateY(-65px);
+    -webkit-transform: translateY(-65px);
+    -moz-transform: translateY(-65px);
+    -ms-transform: translateY(-65px);
+    -o-transform: translateY(-65px);
+}
 .header__text{
+    margin-top: -30px;
     text-align: center;
     padding: 0 1.5rem 5rem 1.5rem;
 }
@@ -370,6 +387,10 @@ footer a{
 /* ---laptop--- */
 
 @media(min-width: 1000px){
+    html,body{
+        width: 100%;
+        overflow-x: hidden;
+    }
     .nav__links{
         position: initial;
         width: max-content;
@@ -390,11 +411,31 @@ footer a{
     .nav__menu{
         display: none;
     }
+    header{
+        min-height: 620px;
+        grid-template-columns: auto 1fr;
+        height: 100%;
+    }
+    .header__img{
+        background: url(./images/bg-intro-desktop.svg) no-repeat;
+        background-size: cover;
+        background-position: 30% -50px;
+        order: 1;
+        position: relative;
+    }
+    .header__img img{
+        position: absolute;
+        transform: translate(85px, 10px);
+        -webkit-transform: translate(85px, 10px);
+        -moz-transform: translate(85px, 10px);
+        -ms-transform: translate(85px, 10px);
+        -o-transform: translate(85px, 10px);
+    }
     .header__text{
         max-width: 465px;
         text-align: left;
-        padding: 5.6rem 0 5rem 3rem;
-    }
+        padding: 15rem 0 0 3rem;
+    } 
     .header__text a{
         margin: 2rem 0 0 0;
     }
@@ -435,12 +476,22 @@ footer a{
     nav{
         padding: 1.5rem 8.5rem;
     }
+    .nav__links li a{
+        font-size: 1.125rem;
+    }
     .nav__cta,.footer__last--cta{
         padding: 1rem 2rem;
     }
+    header{
+        min-height: 780px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .header__img{
+        background-position: 20% -50px;
+    }
     .header__text{
         max-width: 585px;
-        padding: 0 0 10rem 8.5rem;
+        padding: 20rem 0 10rem 8.5rem;
     }
     .header__text h1{
         font-size: 3.5rem;
@@ -477,4 +528,16 @@ footer a{
     .footer__nav--links{
         text-align: left;
     }
+}
+
+/* ---bigger screens--- */
+
+@media(min-width: 1450px){
+    .header__img img{
+        transform: translate(85px, -10px);
+        -webkit-transform: translate(85px, -10px);
+        -moz-transform: translate(85px, -10px);
+        -ms-transform: translate(85px, -10px);
+        -o-transform: translate(85px, -10px);
+}
 }
