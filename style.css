@@ -117,7 +117,7 @@ nav.active .nav__links{
     position: absolute;
     content: '';
     left: 50%;
-    bottom: -2.25rem;
+    bottom: -1.25rem;
     width: 0;
     height: 3px;
     background: linear-gradient(to right, var(--Lime-Green),var(--Bright-Cyan));
@@ -316,6 +316,14 @@ main .blog{
     -ms-border-radius: .3rem;
     -o-border-radius: .3rem;
     overflow: hidden;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+}
+.blog__grid:hover{
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
 }
 .blog__grid img{
     width: 100%;
@@ -458,6 +466,9 @@ footer a:not(.footer__last--cta):hover{
         color: var(--Grayish-Blue);
         font-size: 1rem;
     }
+    .nav__links li a::after{
+        bottom: -2.25rem;
+    }
     .nav__menu{
         display: none;
     }
@@ -528,6 +539,9 @@ footer a:not(.footer__last--cta):hover{
     }
     .nav__links li a{
         font-size: 1.125rem;
+    }
+    .nav__links li a::after{
+        bottom: -2.5rem;
     }
     .nav__cta,.footer__last--cta{
         padding: 1rem 2rem;
