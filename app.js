@@ -1,7 +1,15 @@
 document.documentElement.style.scrollBehavior = "smooth";  //scroll-behavior: smooth;
 
-//toggle hamburger
 const body = document.body;
+//preloader
+const preloader = document.querySelector('.preloader');
+window.addEventListener('load',()=>{
+    body.classList.add('preloader-active');
+    preloader.style.display = "none";
+})
+
+
+//toggle hamburger
 const nav = document.querySelector('nav');
 const navMenu = document.querySelector('.nav__menu');
 const overlay = document.querySelector('.body__overlay');
