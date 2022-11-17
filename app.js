@@ -18,11 +18,9 @@ navMenu.addEventListener('click',()=>{
     nav.classList.toggle('active');
 
     if(nav.classList.contains('active')){
-        nav.style.boxShadow = "0 20px 20px 0 hsla(0, 0%, 0%, .5)";
         overlay.style.background = "hsla(233, 26%, 24%,.5)";
         overlay.style.zIndex = "10";
     }else{
-        nav.style.boxShadow = "none";
         overlay.style.background = "transparent";
         overlay.style.zIndex = "-1";
     }
@@ -31,5 +29,31 @@ navMenu.addEventListener('click',()=>{
 // remove box-shadow in laptops and desktops
 var x = window.matchMedia("(min-width: 1000px)");
 if(x.matches && nav.classList.contains('active')){
-    nav.style.boxShadow = "none";
+    nav.classList.remove('active');
 }
+
+// transitions on scroll
+
+const fadeFromLeft = document.querySelectorAll('.ffl');
+const observer = new IntersectionObserver(entries =>{
+    entries.forEach(entry=>{
+        entry.isIntersecting && entry.target.classList.add('ffl-show');
+    })
+})
+fadeFromLeft.forEach(el => observer.observe(el));
+
+const fadeFromTop = document.querySelectorAll('.fft');
+const observerTwo = new IntersectionObserver(entries =>{
+    entries.forEach(entry=>{
+        entry.isIntersecting && entry.target.classList.add('fft-show');
+    })
+})
+fadeFromTop.forEach(el => observerTwo.observe(el));
+
+const fadeFromBottom = document.querySelectorAll('.ffb');
+const observerThree = new IntersectionObserver(entries =>{
+    entries.forEach(entry=>{
+        entry.isIntersecting && entry.target.classList.add('ffb-show');
+    })
+})
+fadeFromBottom.forEach(el => observerThree.observe(el));
