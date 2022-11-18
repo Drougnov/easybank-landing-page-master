@@ -405,7 +405,16 @@ main .blog{
 .blog__grid:nth-child(3){transition-delay: .6s;}
 .blog__grid:nth-child(4){transition-delay: .9s;}
 .blog__grid:hover{
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+    animation: boxShadow .3s linear forwards;
+    -webkit-animation: boxShadow .3s linear forwards;
+}
+@keyframes boxShadow{
+    0%{
+        box-shadow: none;
+    }
+    100%{
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    }
 }
 .blog__grid img{
     width: 100%;
