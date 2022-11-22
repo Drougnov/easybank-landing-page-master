@@ -24,7 +24,7 @@ h1,h2,h3{
     --white: hsl(0, 0%, 100%);
 }
 body{
-    height: 100vh;
+    min-height: 100vh;
     color: var(--Grayish-Blue);
     background: var(--main-bg);
     font-size: 15px;
@@ -33,7 +33,6 @@ body{
     overflow-y: hidden;
 }
 body.preloader-active{
-    min-height: 100vh;
     overflow-y: auto;
 }
 
